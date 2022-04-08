@@ -23,13 +23,14 @@
 \usepackage{lscape}     
 \usepackage{multicol}
  \usepackage{graphicx}
-\DeclareMathOperator*{\Res}{Res}
-\renewcommand\thesection{\arabic{section}}
+ \DeclareMathOperator*{\Res}{Res}
+ \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 \lstset{
@@ -86,7 +87,7 @@ columns=fullflexible
 \newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
 \newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
 
-\numberwithin{equation}{subsection}
+
 \makeatletter
 \@addtoreset{figure}{problem}
 \makeatother
@@ -108,18 +109,22 @@ columns=fullflexible
 % make the title area
 \maketitle
 \newpage
-\tableofcontents
+
 \bigskip
+
 \renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
 \renewcommand{\theequation}{\theenumi}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
 
+
+
+\section{QUESTION-7a}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\numberwithin{equation}{enumi}
 
-\item Question 7a.\\ In the given figure AC is a tangent to the circle with centre O. If $\angle$ADB=55$^{\circ}$, find x and y. Give reasons for your answers.\\
+\item In the given figure $AC$ is a tangent to the circle with centre $O$. If $\angle$$ADB=55$$^{\circ}$, find $x$ and $y$. Give reasons for your answers.\\
 \begin{figure}[htbp]
 \includegraphics[scale=.4]{/Users/saanviamrutha/Desktop/Figure.png}
 \label{fig}
@@ -127,36 +132,37 @@ columns=fullflexible
 
 \solution 
 Given,\\
- $\angle$BDA=55$^{\circ}$, $\angle$OCA=x$^{\circ}$, $\angle$AOC=y$^{\circ}$\\
 
-As AC is a tangent to the given circle, $\angle$OAC=$\angle$BAD=90$^{\circ}$\\
+ $\angle$$BDA=55$$^{\circ}$, $\angle$$OCA=x$$^{\circ}$, $\angle$$AOC=y$$^{\circ}$\\
+
+As $AC$ is a tangent to the given circle, $\angle$$OAC=$$\angle$$BAD=90$$^{\circ}$\\
 \\
-Angle Sum Property for $\vec{\Delta}$OAC, \\
-               $\angle$OAC+$\angle$OCA+$\angle$AOC=180$^{\circ}$\\
-               90$^{\circ}$+x$^{\circ}$+y$^{\circ}$=180$^{\circ}$\\
-               x$^{\circ}$+y$^{\circ}$=90$^{\circ}$\\
-               \\ 
-Angle Sum Property for $\vec{\Delta}$ABD, \\   
-               $\angle$ABD+$\angle$BAD+$\angle$BDA=180$^{\circ}$\\
-               $\angle$ABD+90$^{\circ}$+55$^{\circ}$=180$^{\circ}$\\
-               $\angle$ABD=35$^{\circ}$\\ \\
+Angle Sum Property for $\vec{\Delta}$$OAC$, \\
+              $\angle$$OAC+$$\angle$$OCA+$$\angle$$AOC=$$180$$^{\circ}$ \\
+               $90$$^{\circ}$$+x$$^{\circ}$$+y$$^{\circ}$$=180$$^{\circ}$\\
+               $x$$^{\circ}$$+y$$^{\circ}$$=90$$^{\circ}$\\ \\
+               
+Angle Sum Property for $\vec{\Delta}$$ABD$, \\   
+               $\angle$$ABD$$+$$\angle$$BAD$$+$$\angle$$BDA$$=$$180$$^{\circ}$\\
+               $\angle$$ABD+90$$^{\circ}$$+55$$^{\circ}$$=180$$^{\circ}$\\
+               $\angle$$ABD=35$$^{\circ}$\\ 
                 
-                $\angle$BOE+y$^{\circ}$=180$^{\circ}$\\
-                $\angle$BOE=180-y\\ \\
-                Let the radius of the circle be 'r'.\\
+                $\angle$$BOE+y$$^{\circ}$$=180$$^{\circ}$\\
+                $\angle$$BOE=180-y$\\ \\
+                Let the radius of the circle be '$r$'.\\
                 then,\\
-                OB=OE=r\\
-                Then the length of the chord BE becomes 2rcos 35$^{\circ}$.\\
-                Applying 'cosine' rule in $\vec{\Delta}$BOE,\\ 
+                $OB=OE=r$\\
+                Then the length of the chord BE becomes $2rcos 35$$^{\circ}$.\\
+                Applying 'cosine' rule in $\vec{\Delta}$$BOE$,\\ 
               
-               (BE)$^{2}$=(OB)$^{2}$+(OE)$^{2}$-2.(OB).(OE).cos($\angle$BOE)\\ 
-                (2rcos 35$^{\circ}$)$^{2}$ = r$^{2}$+r$^{2}$ - 2.r.r.cos(180-y)\\ 
-                4r$^{2}$cos$^{2}$35$^{\circ}$ = 2r$^{2}$ - 2r$^{2}$cos(180-y)\\ 
-                2cos$^{2}$35$^{\circ}$ = 1 - cos(180-y)\\ 
-                cos(180-y) = -cos 70$^{\circ}$       (${\because}$1-cos$^{2}$${\theta}$ = cos 2${\theta}$)\\ 
-                cos(180-y) = cos(180-70)\\ 
-                ${\therefore}$y = 70$^{\circ}$\\ 
-               ${\therefore}$x = 20$^{\circ}$             (${\because}$x=90-y)\\  
+               $(BE)^2=(OB)^2+(OE)^2-2$.$(OB)$.$(OE)$.$cos($$\angle$$BOE)$\\ 
+                $(2rcos 35$$^{\circ}$$)^2 = r^2+r^2 - 2$.$r$.$r$.$cos(180-y)$\\ 
+                $4r^2cos^2 35$$^{\circ}$$=2r^2 - 2r^2cos(180-y)$\\ 
+                $2cos^2 35$$^{\circ}$$=1-cos(180-y)$\\ 
+                $cos(180-y)=-cos 70$$^{\circ}$       (${\because}$$1-cos^2$${\theta}$$=cos 2$${\theta}$)\\ 
+               $cos(180-y)=cos(180-70)$\\ 
+                ${\therefore}$$y=70$$^{\circ}$\\ 
+               ${\therefore}$$x=20$$^{\circ}$             $($${\because}$$x=90-y)$\\  
                
                
 \end{enumerate}
