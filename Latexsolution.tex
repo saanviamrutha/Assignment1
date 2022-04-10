@@ -3,6 +3,8 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{gensymb}
 \usepackage{amssymb}
+\usepackage{polynom}
+\usepackage{stfloats}
 \usepackage[cmex10]{amsmath}
 \usepackage{amsthm}
 \usepackage[export]{adjustbox}
@@ -21,8 +23,10 @@
 \usepackage{hhline}                                           %%
 \usepackage{ifthen}                                           %%
 \usepackage{lscape}     
-\usepackage{multicol}
+\usepackage{float}
  \usepackage{graphicx}
+ \usepackage{hyperref}
+\graphicspath{{/Users/saanviamrutha/Desktop/}}
  \DeclareMathOperator*{\Res}{Res}
  \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -30,7 +34,7 @@
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-
+\renewcommand\figurename{}
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 \lstset{
@@ -38,6 +42,7 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
+\setlength{\columnsep}{1 mm}
 \begin{document}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -97,7 +102,7 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{AI1103 Assignment-1}
+\title{AI1103 Assignment-1\\Class 10 ICSE-2019}
 \author{AI21BTECH11026\\SAANVI AMRUTHA
 	\thanks{}
 }
@@ -105,52 +110,63 @@ columns=fullflexible
 \maketitle
 \newpage
 \bigskip
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\theequation}{\theenumi}
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\section{\textbf{QUESTION-7a}}
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{figure}{enumi}
-\numberwithin{equation}{enumi}
-\item In the given figure $AC$ is a tangent to the circle with centre $O$. If $\angle$$ADB=55$$^{\circ}$, find $x$ and $y$. Give reasons for your answers.\\
-\begin{figure}[htbp]
-\includegraphics[scale=.4]{/Users/saanviamrutha/Desktop/Figure.png}
-\label{fig}
+
+\begin{enumerate}[label=,ref=]
+
+\item \textbf{Question 7(a)}\\ 
+In the given figure $AC$ is a tangent to the circle with centre $O$. If $\angle$$ADB=55$$^{\circ}$, find $x$ and $y$. Give reasons for your answers.\\
+
+\begin{figure}[h]
+
+\includegraphics[scale=.42]{Figure.png}
+\label{Fig}
 \end{figure}
 
-\solution \\
+
+\textbf{Solution:} \\
+
+
 Given,\\
- $\angle BDA=55^\circ$, $\angle OCA=x^\circ$, $\angle AOC=y^\circ$\\
+
+$\angle BDA=55^\circ$,$\angle OCA=x^\circ$, $\angle AOC=y^\circ$\\
+
 As $AC$ is a tangent to the given circle, $\angle OAC=\angle BAD=90^\circ$\\
 \\
 Angle Sum Property for $\triangle OAC$, \\
-              $\angle OAC+\angle OCA+\angle AOC=180^\circ$ \\
-               $90^\circ+x^\circ+y^\circ=180^\circ$\\
-               $x^\circ+y^\circ=90^\circ$\\ \\
+        \begin{align}
+             \angle OAC+\angle OCA+\angle AOC&=180^\circ \\
+              90^\circ+x^\circ+y^\circ&=180^\circ\\
+             x^\circ+y^\circ&=90^\circ
+               \end{align} 
+             
                
 Angle Sum Property for $\triangle ABD$, \\   
-               $\angle ABD+\angle BAD+\angle BDA=180^\circ$\\
-               $\angle ABD+90^\circ+55^\circ=180^\circ$\\
-               $\angle ABD=35^\circ$\\ 
-                
-                $\angle BOE+y^\circ=180^\circ$\\
-                $\angle BOE=180-y$\\ \\
+\begin{align}
+               \angle ABD+\angle BAD+\angle BDA&=180^\circ\\
+               \angle ABD+90^\circ+55^\circ&=180^\circ\\
+               \angle ABD&=35^\circ
+ \end{align}  
+ As $AB$ is a straight line,
+ \begin{align}             
+                \angle BOE+y^\circ&=180^\circ\\
+                \angle BOE&=180-y
+ \end{align}
                 Let the radius of the circle be '$r$'.\\
                 then,\\
-                $OB=OE=r$\\
+               $\implies OB=OE=r$\\
                 Then the length of the chord BE becomes $2rcos 35^\circ$.\\
                 Applying 'cosine' rule in $\triangle BOE$,\\ 
-              
-               $(BE)^2=(OB)^2+(OE)^2-2(OB)(OE)cos(\angle BOE)$\\ 
-                $(2rcos 35^\circ)^2 = r^2+r^2 - 2r^2cos(180-y)$\\ 
-                $4r^2cos^2 35^\circ=2r^2 - 2r^2cos(180-y)$\\ 
-                $2cos^2 35^\circ=1-cos(180-y)$\\ 
-                $cos(180-y)=-cos 70^\circ$       $(\because 1-cos^2\theta=cos 2\theta)$\\ 
-               $cos(180-y)=cos(180-70)$\\ 
-                $\therefore y=70^\circ$\\ 
-               $\therefore x=20^\circ$             $(\because x=90-y)$\\  
-               
+              \begin{align} 
+               BE^2&=OB^2+OE^2-2(OB)(OE)cos(\angle BOE)\\ 
+                (2rcos 35)^2&=r^2+r^2-2r^2cos(180-y)\\ 
+                4r^2cos^2 35&=2r^2 - 2r^2cos(180-y)\\ 
+                2cos^2 35&=1-cos(180-y)\\ 
+                cos(180-y)&=-cos 70\\
+                       (\because 1-cos^2\theta&=cos 2\theta)\\ 
+               cos(180-y)&=cos(180-70)\\ 
+                \implies y&=70^\circ\\ 
+               \implies x&=20^\circ            
+            \end{align}
                
 \end{enumerate}
 \end{document}
