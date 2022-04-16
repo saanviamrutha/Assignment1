@@ -1,49 +1,88 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
+\RequirePackage{amsmath}
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-\usepackage{gensymb}
-\usepackage{amssymb}
-\usepackage{polynom}
-\usepackage{stfloats}
-\usepackage[cmex10]{amsmath}
-\usepackage{amsthm}
-\usepackage[export]{adjustbox}
-\usepackage{bm}
-\usepackage{longtable}
-\usepackage{enumitem}
-\usepackage{mathtools}
- \usepackage{tikz}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{listings}
-\usepackage{color}                                            %%
-\usepackage{array}                                            %%
-\usepackage{longtable}                                        %%
-\usepackage{calc}                                             %%
-\usepackage{multirow}                                         %%
-\usepackage{hhline}                                           %%
-\usepackage{ifthen}                                           %%
-\usepackage{lscape}     
-\usepackage{float}
+%
+% \usepackage{setspace}
+ \usepackage{gensymb}
  \usepackage{graphicx}
- \usepackage{hyperref}
-\graphicspath{{/Users/saanviamrutha/Downloads/}}
- \DeclareMathOperator*{\Res}{Res}
- \renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
-\renewcommand\thesectiondis{\arabic{section}}
-\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-\renewcommand\figurename{}
+%\doublespacing
+ \usepackage{polynom}
+%\singlespacing
+%\usepackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+%\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{relsize}
+
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{pifont}
+%\usepackage{iithtlc}
+% \usepackage{mathrsfs}
+% \usepackage{txfonts}
+ \usepackage{stfloats}
+% \usepackage{steinmetz}
+ \usepackage{bm}
+% \usepackage{cite}
+% \usepackage{cases}
+% \usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+% \usepackage{circuitikz}
+% \usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+\usepackage[latin1]{inputenc}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+   \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+%\usepackage{enumerate}
+    \usepackage{amsmath}
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\graphicspath{{/Users/saanviamrutha/Desktop/}}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+%\renewcommand{\baselinestretch}{2}
+
+
+% correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
-\def\inputGnumericTable{}                                 %%
+                                %%
+
 \lstset{
+%language=C,
 frame=single, 
 breaklines=true,
 columns=fullflexible
 }
-\setlength{\columnsep}{1 mm}
+
 \begin{document}
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -51,12 +90,17 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
     \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 \bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -87,48 +131,55 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
-\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
-\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
 \makeatletter
 \@addtoreset{figure}{problem}
 \makeatother
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\makeatletter 
+\renewcommand{\thefigure}{S\@arabic\c@figure}
+\makeatother
 \renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
 \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
      \def\rightbox#1{\makebox[0in][r]{#1}}
      \def\centbox#1{\makebox[0in]{#1}}
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{ Assignment-1\\Class 10 ICSE-2019}
-\author{AI21BTECH11026\\SAANVI AMRUTHA
-	\thanks{}
-}
-% make the title area
+       
+\title{AI1110 Assignment-1 \\ ICSE 10,2019} 
+\author{Saanvi Amrutha\\AI21BTECH11026} 
+    
 \maketitle
 \newpage
 \bigskip
-\begin{enumerate}[label= ,ref= ]
-\item \textbf{Question 7(a)}\\ 
-In the given figure $AC$ is a tangent to the circle with centre $O$. If $\angle$$ADB=55$$^{\circ}$, find $x$ and $y$. Give reasons for your answers.\\
-\begin{figure}[h]
-\includegraphics[scale=.3]{Figure_1.png}
-\label{Fig}
+
+\textbf{Question 7(a)}\\ 
+ \text In the given figure $AC$ is a tangent to the circle with centre $O$. If $\angle ADB=55^\circ$, find $x$ and $y$. Give reasons for your answers.\\
+
+ \begin{figure}[h]
+\includegraphics[width=\columnwidth]{Figure.png}
 \end{figure}
 
-\textbf{Solution:} \\
-Given,\\
-  \begin{align}
-\angle BDA&=55^\circ \\ 
-\angle OCA&=x^\circ\\
- \angle AOE&=y^\circ
- \end{align} 
+\solution \\
+Given,  
+\begin{align}
+                   \angle BDA&=55^\circ \\ 
+                   \angle OCA&=x^\circ\\
+                   \angle AOE&=y^\circ
+                    \end{align} 
 As $AC$ is a tangent to the given circle, 
-\begin{align} 
+\begin{equation} 
 \angle OAC=\angle BAD=90^\circ
-\end{align} 
+\end{equation} 
 \\
 Angle Sum Property for $\triangle OAC$, 
         \begin{align}
@@ -146,13 +197,13 @@ Angle Sum Property for $\triangle ABD$,
  \end{align}  
  Let the radius of the circle be $r$.\\
 
- \begin {align} 
+ \begin {equation} 
 \implies OB=OE=r
-\end{align} 
+\end{equation} 
 Then, $\triangle BOE$ is an isosceles triangle.\\
- \begin{align} 
+ \begin{equation} 
  \implies \angle ABD=\angle BEO
- \end{align}  
+ \end{equation}  
 \textbf{In a triangle, exterior angle is equal to sum of the two opposite interior angles.}\\
 \begin{align}
 &\implies &\angle AOE&=\angle ABD+\angle BEO\\
@@ -160,9 +211,53 @@ Then, $\triangle BOE$ is an isosceles triangle.\\
 &\implies &y&=70^\circ\\
 &\implies &x&=20^\circ
 \end{align}  
-
- 
- 
-                
-\end{enumerate}
-\end{document}
+\\\\
+\textbf{METHOD-2}\\
+\textbf{Steps for construction:}\\
+i) Draw a circle with centre at origin $\vec{O}$ and radius $r$.\\
+      Assume $r=5$.
+\begin{equation}
+\vec{O}= \myvec{0\\0}\\
+\end{equation}
+ii) Consider points 
+\begin{align}
+\vec A&=\myvec{0\\r}\\
+\implies \vec A &= \myvec{0\\5}\\
+\vec B&=\myvec{0\\-r}\\
+\implies \vec B &= \myvec{0\\-5}
+\end{align}
+Join $\vec A$,$\vec B$.\\
+iii) Consider a point $\vec C$ where
+\begin{equation}
+\vec C=\myvec{-r\\AC}\\
+\end{equation}
+From the given figure in the question,
+\begin{align}
+\tan \angle OCA&=\frac{OA}{AC}\\
+\tan x&=\frac{r}{AC}\\
+AC&=r\tan x\\
+AC&=5\tan 20^\circ\\
+\implies \vec C&=\myvec{-5\\5\tan 20^\circ}
+\end{align}
+Join $\vec A$,$\vec C$.\\
+Join $\vec O$,$\vec C$.\\
+iv) 
+Consider a point $D$ where,\\
+\begin{equation}
+\vec D=\myvec{-r\\AD}\\
+\end{equation}
+From the given figure,
+\begin{align}
+\tan \angle BDA&=\frac{AB}{AD}\\
+\tan 55^\circ&=\frac{2r}{AD}\\
+AD&=10\tan 55^\circ \\
+\implies \vec D &=\myvec{-5\\10\tan55^\circ}
+\end{align}
+Join $\vec B$,$\vec D$.\\\\
+Using the above steps of construction, generate the figure using python.\\\\
+\textbf{Generated Figure:}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.28]{Figure1.png}
+\end{figure}
+ \end{document}
