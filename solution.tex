@@ -221,37 +221,37 @@ i) Draw a circle with centre at origin $\vec{O}$ and radius $r$.\\
 \end{equation}
 ii) Consider points 
 \begin{align}
-\vec A&=\myvec{0\\r}\\
-\implies \vec A &= \myvec{0\\5}\\
-\vec B&=\myvec{0\\-r}\\
-\implies \vec B &= \myvec{0\\-5}
+\vec A&=\myvec{0\\-r}\\
+\implies \vec A &= \myvec{0\\-5}\\
+\vec B&=\myvec{0\\r}\\
+\implies \vec B &= \myvec{0\\5}
 \end{align}
 Join $\vec A$,$\vec B$.\\
 iii) Consider a point $\vec C$ where
 \begin{equation}
-\vec C=\myvec{-r\\AC}\\
+\vec C=\myvec{AC\\-r}\\
 \end{equation}
 From the given figure in the question,
 \begin{align}
-\tan \angle OCA&=\frac{OA}{AC}\\
-\tan x&=\frac{r}{AC}\\
-AC&=r\tan x\\
-AC&=5\tan 20^\circ\\
-\implies \vec C&=\myvec{-5\\5\tan 20^\circ}
+\tan \angle AOC&=\frac{AC}{OA}\\
+\tan y&=\frac{AC}{r}\\
+AC&=r\tan y\\
+AC&=5\tan 70^\circ\\
+\implies \vec C&=\myvec{5\tan 70^\circ\\-5}
 \end{align}
 Join $\vec A$,$\vec C$.\\
 Join $\vec O$,$\vec C$.\\
 iv) 
 Consider a point $D$ where,\\
 \begin{equation}
-\vec D=\myvec{-r\\AD}\\
+\vec D=\myvec{AD\\-r}\\
 \end{equation}
 From the given figure,
 \begin{align}
-\tan \angle BDA&=\frac{AB}{AD}\\
-\tan 55^\circ&=\frac{2r}{AD}\\
+\tan \angle ABD&=\frac{AB}{AD}\\
+\tan 35^\circ&=\frac{2r}{AD}\\
 AD&=10\tan 55^\circ \\
-\implies \vec D &=\myvec{-5\\10\tan55^\circ}
+\implies \vec D &=\myvec{10\tan35^\circ\\-5}
 \end{align}
 Join $\vec B$,$\vec D$.\\\\
 Using the above steps of construction, generate the figure using python.\\\\
@@ -260,4 +260,20 @@ Using the above steps of construction, generate the figure using python.\\\\
     \centering
     \includegraphics[scale=0.28]{Figure1.png}
 \end{figure}
+\\\\\\\\\\
+The input and output parameters required for drawing the figure are available in the below table.\\
+\begin{table}[!h]
+    \begin{tabular}{|c|c|c|} \hline
+        \textbf{Variable} & \textbf{Value}    & \textbf{Input/Output}          \\ \hline
+        $r$               & 5               & Input          \\ \hline
+        $\angle AOC$ &$70^\circ$   &Input       \\ \hline    
+        $\angle ABD$   &$35^\circ$    &Input      \\ \hline
+        $\vec{O}$       & $\vec{0}$        & Input  \\\hline
+        $\vec{A}$       &\myvec{0\\-5}& Input\\\hline
+        $\vec{B}$       &  $\myvec{0\\5}$ & Input\\\hline
+        $\vec{C}$       &\myvec{5\tan 70^\circ\\-5}& Output\\\hline
+        $\vec{D}$       & $\myvec{10\tan35^\circ\\-5}$ & Output\\\hline
+        $\vec{E}$       &\myvec{5\sin 70^\circ \\ 5\cos 70^\circ} &Output\\\hline
+    \end{tabular}
+\end{table}
  \end{document}
